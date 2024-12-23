@@ -14,7 +14,7 @@ namespace FruitsAPI.NET
 
 
 
-       public Fruits(string nom, string description)
+       public Fruits(string nom, string description, string saison)
         {
             _nom = nom;
             _description = description;
