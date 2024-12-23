@@ -34,6 +34,10 @@ namespace FruitsAPI.NET.Controllers
             listeFruits.Add(Orange);
             listeFruits.Add(Raisin);
 
+            //Debug, error & success
+            _logger.LogError("Erreur.");
+            _logger.LogInformation("Return" + listeFruits.Count() + "elements avec succés.");
+
             // Je return ma liste pour que la méthode GET puisse récuperer mes données.
             return listeFruits;
 
