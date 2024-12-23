@@ -40,9 +40,21 @@ namespace FruitsAPI.NET.Controllers
 
             // Je return ma liste pour que la méthode GET puisse récuperer mes données.
             return listeFruits;
+        }
 
+        // Je crée une nouvelle route
+        [HttpPost(Name = "PostFruits")]
+        // Je crée une action de type Post je récupere les valeurs du request Body, je veux un type Fruits
+        public IActionResult Post([FromBody] Fruits nouveauFruit)
+        {
+            // Si mon nouveauFruit est null, alors j'ai une erreur 400
+            if (nouveauFruit == null)
+            { 
+                return BadRequest(); 
+            }
 
-
+            // Return success 200 si tout est OK.
+            return Ok(nouveauFruit);
         }
     }
 }
