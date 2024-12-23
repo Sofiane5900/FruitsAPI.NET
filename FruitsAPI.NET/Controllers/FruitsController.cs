@@ -25,13 +25,17 @@ namespace FruitsAPI.NET.Controllers
             Fruits Orange = new Fruits("Orange", "Un agrume rond à écorce orange, juteux et plein de vitamine C, parfait pour les jus frais.", "Hiver");
             Fruits Raisin = new Fruits("Raisin", "De petites baies sucrées, vertes ou violettes, utilisées pour les vins, jus ou à grignoter nature.", "Automne");
 
-            // Liste de mes fruits.
+            // Je déclare une liste pour  mes fruits.
             List<Fruits> listeFruits = new List<Fruits>();
+            // J'ajoute mes objets Fruits a ma liste.
             listeFruits.Add(Pomme);
             listeFruits.Add(Banane);
             listeFruits.Add(Fraise);
             listeFruits.Add(Orange);
             listeFruits.Add(Raisin);
+
+            // Je return ma liste pour que la méthode GET puisse récuperer mes données.
+            return listeFruits;
 
 
 
